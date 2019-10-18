@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et_documento = (EditText)findViewById(R.id.);
+        et_documento = (EditText)findViewById(R.id.bottom);
         et_nombre = (EditText)findViewById(R.id.editTextDocument);
         et_apellido = (EditText)findViewById(R.id.);
         rb_estado = (RadioButton)findViewById(R.id);
