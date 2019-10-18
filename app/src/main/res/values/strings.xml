@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TestRepo</string>
     <string name="tittle_app">Agregar persona</string>
+    <string name="editTextDocument">Ingrese su documento</string>
+    <string name="editTextName">Ingrese su nombre</string>
+    <string name="editTextLastName">Ingrese su apellido</string>
 </resources>

@@ -21,10 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et_documento = (EditText)findViewById(R.id.bottom);
-        et_nombre = (EditText)findViewById(R.id.editTextDocument);
-        et_apellido = (EditText)findViewById(R.id.);
-        rb_estado = (RadioButton)findViewById(R.id);
+        et_documento = (EditText)findViewById(R.id.editTextDocument);
+        et_nombre = (EditText)findViewById(R.id.editTextName);
+        et_apellido = (EditText)findViewById(R.id.editTextLastName);
     }
 
     public void Insertar(){
@@ -34,21 +33,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String documento = et_documento.getText().toString();
         String nombre = et_nombre.getText().toString();
         String apellido = et_apellido.getText().toString();
-        int estado = rb_estado.;
 
         if (!documento.isEmpty() && !nombre.isEmpty() && !apellido.isEmpty()){
             ContentValues datos = new ContentValues();
             datos.put("documento",documento);
             datos.put("nombre",nombre);
             datos.put("apellido",apellido);
-            datos.put("estado",estado);
             BaseDeDatos.insert("persona",null,datos);
             BaseDeDatos.close();
             et_documento.setText("");
             et_nombre.setText("");
             et_apellido.setText("");
-            rb_estado.;
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,"Debe llenar todos los campos",Toast.LENGTH_SHORT).show();
         }
     }
 
