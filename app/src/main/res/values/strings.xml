@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestRepo</string>
+    <string name="tittle_app">Agregar persona</string>
 </resources>
