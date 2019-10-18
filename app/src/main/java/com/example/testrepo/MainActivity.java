@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -15,16 +16,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText et_documento,et_nombre,et_apellido;
     private RadioButton rb_estado;
+    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        startComponents();
+
+
+    }
+
+    private void startComponents() {
         et_documento = (EditText)findViewById(R.id.editTextDocument);
         et_nombre = (EditText)findViewById(R.id.editTextName);
         et_apellido = (EditText)findViewById(R.id.editTextLastName);
+        buttonSave = findViewById(R.id.buttonSave);
+        buttonSave.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.buttonSave:
+                Insertar();
+            break;
+        }
+    }
+
 
     public void Insertar(){
         AdminSQLite admin = new AdminSQLite(this,"persona",null,1);
@@ -50,8 +70,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
 }
