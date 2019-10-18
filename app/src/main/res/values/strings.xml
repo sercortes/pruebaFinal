@@ -4,4 +4,5 @@
     <string name="editTextDocument">Ingrese su documento</string>
     <string name="editTextName">Ingrese su nombre</string>
     <string name="editTextLastName">Ingrese su apellido</string>
+    <string name="TextViewEstado">Estado</string>
 </resources>
